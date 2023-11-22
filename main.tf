@@ -23,3 +23,13 @@ resource "google_compute_instance" "dareit-vm-ci" {
   }
 }
 
+resource "google_storage_bucket" "example_bucket" {
+  name     = "dareit-tf-bucket"
+  location = "us-central1"
+  storage_class = "STANDARD"
+
+  versioning {
+    enabled = true
+  }
+}
+
